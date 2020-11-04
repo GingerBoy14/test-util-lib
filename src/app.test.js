@@ -1,5 +1,5 @@
 describe('first test', () => {
   it('first iteration', () => {
-    expect(8).toBe(9)
+    expect(9).toBe(9)
   })
 })

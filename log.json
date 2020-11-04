@@ -1,1 +1,1 @@
-{"log":[{"description":"first test","it":"first iteration","expects":{"status":false,"error":{"received":8,"expects":9,"funcName":"toBe"}},"path":"src\\app.test.js"},{"path":"src\\componetns\\app\\log.test.js","status":true}],"tests":{"passed":2,"failed":1,"total":3},"testSuites":{"passed":1,"failed":1,"total":2}}
+{"log":[{"path":"src\\app.test.js","status":true},{"path":"src\\componetns\\app\\log.test.js","status":true}],"tests":{"passed":3,"failed":0,"total":3},"testSuites":{"passed":2,"failed":0,"total":2}}
