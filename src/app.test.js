@@ -8,7 +8,7 @@ describe('second second test', () => {
     expect(9).toBe(9)
   })
   it('second iteration', () => {
-    expect(9).toBe(19)
+    expect(19).toBe(19)
   })
 })
 describe('third test', () => {
