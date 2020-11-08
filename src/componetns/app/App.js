@@ -13,12 +13,13 @@ function App() {
 
   const fetchData = () => {
     fetch(
-      `${window.location.protocol}//${window.location.hostname}:${process.env.REACT_APP_FETCH_PORT}`
+      `${window.location.protocol}//${window.location.hostname}:${process.env.REACT_APP_FETCH_PORT}/getTests`
     )
+      .then((json) => json.json())
       .then((data) => setLog(data))
       .catch(() => setLog(false))
   }
-  console.log(process.env.REACT_APP_FETCH_PORT)
+
   return <>{log ? <div>good</div> : <FileNotFound fetchData={fetchData} />}</>
 }
 export default App
