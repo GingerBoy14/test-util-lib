@@ -1,0 +1,12 @@
+.pass-label{
+    background-color: rgba(0,225,0,0.75);
+    padding: .1rem .27rem;
+    border-radius: .1rem;
+    color: white !important;
+}
+.fail-label{
+    background-color: rgba(225,0,0,0.75);
+    padding: .1rem .45rem;
+    border-radius: .1rem;
+    color: white !important;
+}
