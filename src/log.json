@@ -1,1 +1,104 @@
-{"log":[{"path":"src\\componetns\\app\\__tests__\\log.test.js","status":true},{"description":"first test","it":"first iteration","expects":{"status":false,"error":{"received":9,"expects":8,"funcName":"toBe"}},"path":"src\\app.test.js"},{"description":"second second test","it":"first iteration","expects":{"status":true},"path":"src\\app.test.js"},{"description":"second second test","it":"second iteration","expects":{"status":true},"path":"src\\app.test.js"},{"description":"third test","it":"first iteration","expects":{"status":false,"error":{"received":9,"expects":8,"funcName":"toBe"}},"path":"src\\app.test.js"}],"tests":{"passed":4,"failed":2,"total":6},"testSuites":{"passed":1,"failed":1,"total":2}}
+{
+  "log": [
+    {
+      "path": "src\\componetns\\app\\__tests__\\log.test.js",
+      "status": true
+    },
+    {
+      "description": "first test",
+      "it": "first iteration",
+      "expects": {
+        "status": false,
+        "error": {
+          "received": 9,
+          "expects": 8,
+          "funcName": "toBe"
+        }
+      },
+      "path": "src\\app.test.js"
+    },
+    {
+      "description": "second second test",
+      "it": "first iteration",
+      "expects": {
+        "status": true
+      },
+      "path": "src\\app.test.js"
+    },
+    {
+      "description": "second second test",
+      "it": "second iteration",
+      "expects": {
+        "status": true
+      },
+      "path": "src\\app.test.js"
+    },
+    {
+      "description": "third test",
+      "it": "first iteration",
+      "expects": {
+        "status": false,
+        "error": {
+          "received": 9,
+          "expects": 8,
+          "funcName": "toBe"
+        }
+      },
+      "path": "src\\app.test.js"
+    },
+    {
+      "description": "Objects",
+      "it": "obj toBe obj",
+      "expects": {
+        "status": false,
+        "error": {
+          "received": {
+            "a": 5
+          },
+          "expects": {
+            "a": 5
+          },
+          "funcName": "toBe"
+        }
+      },
+      "path": "src\\componetns\\TestsSummary\\__test__\\TextSummary.test.js"
+    },
+    {
+      "description": "Objects",
+      "it": "obj toEqual obj",
+      "expects": {
+        "status": true
+      },
+      "path": "src\\componetns\\TestsSummary\\__test__\\TextSummary.test.js"
+    },
+    {
+      "description": "second summary",
+      "it": "array length = 5",
+      "expects": {
+        "status": false,
+        "error": {
+          "received": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "expects": 5,
+          "funcName": "toEqual"
+        }
+      },
+      "path": "src\\componetns\\TestsSummary\\__test__\\TextSummary.test.js"
+    }
+  ],
+  "tests": {
+    "passed": 5,
+    "failed": 4,
+    "total": 9
+  },
+  "testSuites": {
+    "passed": 1,
+    "failed": 2,
+    "total": 3
+  }
+}
