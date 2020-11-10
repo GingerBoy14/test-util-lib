@@ -1,6 +1,6 @@
 describe('first test', () => {
   it('first iteration', () => {
-    expect(9).toBe(8)
+    expect(9).toBe(9)
   })
 })
 describe('second second test', () => {
@@ -13,6 +13,6 @@ describe('second second test', () => {
 })
 describe('third test', () => {
   it('first iteration', () => {
-    expect(9).toBe(8)
+    expect(9).toBe(9)
   })
 })
