@@ -5,7 +5,7 @@ describe('second, one file, test', () => {
 })
 describe('second test', () => {
   it('second iteration', () => {
-    expect(10).toBe(9)
+    expect(10).toBe(101)
   })
 })
 // describe('obj ToBe', () => {
