@@ -1,6 +1,6 @@
 describe('Objects', () => {
   it('obj toBe obj', () => {
-    expect(5).toBe(5)
+    expect().toBe(5)
   })
   it('obj toEqual obj', () => {
     expect({ a: 5 }).toEqual({ a: 5 })
