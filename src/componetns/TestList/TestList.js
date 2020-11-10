@@ -11,8 +11,12 @@ const { Panel } = Collapse
 
 const TestList = ({ data }) => {
   const [activePanels, setActivePanels] = useState([])
+  const screen = useBreakpoint()
   return (
-    <Card title={<TestTitle collapse={setActivePanels} />} bordered={false}>
+    <Card
+      title={<TestTitle collapse={setActivePanels} />}
+      bordered={false}
+      bodyStyle={{ padding: `${screen.xs && '12px 0'}` }}>
       <Collapse
         bordered={false}
         defaultActiveKey={activePanels}
@@ -71,8 +75,8 @@ const Describe = (props) => {
   return (
     <>
       {describe.map(({ description, it }) => (
-        <div key={description}>
-          {description}
+        <div key={description} style={{ paddingBottom: '12px' }}>
+          <Text strong>{description}</Text>
           {it.map(({ name, expects }) => {
             const Icon = () => {
               return expects.status ? (
@@ -82,8 +86,14 @@ const Describe = (props) => {
               )
             }
             return (
-              <div key={name}>
+              <div key={name} style={{ padding: '0 24px' }}>
                 <Icon /> <Text>{name}</Text>
+                {expects.error && (
+                  <Text type="secondary" style={{ paddingLeft: '24px' }}>
+                    expects({expects.error.expects}).{expects.error.funcName}(
+                    {expects.error.received})
+                  </Text>
+                )}
               </div>
             )
           })}
