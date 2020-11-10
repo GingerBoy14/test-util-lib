@@ -32,7 +32,6 @@ const TestList = ({ data }) => {
               </div>
             )
           }
-          console.log(activePanels)
           return (
             <Panel
               key={key}
@@ -85,13 +84,14 @@ const Describe = (props) => {
                 <CloseCircleTwoTone twoToneColor="#E94149" />
               )
             }
+            //fixme some wrong display in boolean tests
             return (
               <div key={name} style={{ padding: '0 24px' }}>
                 <Icon /> <Text>{name}</Text>
                 {expects.error && (
                   <Text type="secondary" style={{ paddingLeft: '24px' }}>
-                    expects({expects.error.expects}).{expects.error.funcName}(
-                    {expects.error.received})
+                    expects({String(expects.error.expects)}).
+                    {expects.error.funcName}({String(expects.error.received)})
                   </Text>
                 )}
               </div>
