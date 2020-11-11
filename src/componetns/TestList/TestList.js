@@ -3,7 +3,7 @@ import { StatusLabel } from '../StatusLabel'
 import { Grid, Card, Button, Typography, Collapse } from 'antd'
 import { CloseCircleTwoTone, CheckCircleTwoTone } from '@ant-design/icons'
 
-const { Title, Text } = Typography
+const { Title, Text, Paragraph } = Typography
 const { useBreakpoint } = Grid
 const { Panel } = Collapse
 
@@ -25,7 +25,7 @@ const TestList = ({ data }) => {
           const { path, status, describe } = log
           if (status) {
             return (
-              <div key={key}>
+              <div key={key} style={{ paddingLeft: '12px' }}>
                 <StatusLabel path={path} status={status} />
               </div>
             )
@@ -72,7 +72,7 @@ const Describe = (props) => {
   return (
     <>
       {describe.map(({ description, it }) => (
-        <div key={description} style={{ paddingBottom: '12px' }}>
+        <Paragraph key={description}>
           <Text strong>{description}</Text>
           {it.map(({ name, expects }) => {
             const Icon = () => {
@@ -86,7 +86,10 @@ const Describe = (props) => {
               <div key={name} style={{ padding: '0 24px' }}>
                 <Icon /> <Text>{name}</Text>
                 {expects.error && (
-                  <Text type="secondary" style={{ paddingLeft: '24px' }}>
+                  <Text
+                    type="secondary"
+                    ellipsis
+                    style={{ paddingLeft: '24px' }}>
                     expects({JSON.stringify(expects.error.received)}).
                     {expects.error.funcName}(
                     {JSON.stringify(expects.error.expects)})
@@ -95,7 +98,7 @@ const Describe = (props) => {
               </div>
             )
           })}
-        </div>
+        </Paragraph>
       ))}
     </>
   )
