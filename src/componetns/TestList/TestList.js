@@ -7,8 +7,6 @@ const { Title, Text } = Typography
 const { useBreakpoint } = Grid
 const { Panel } = Collapse
 
-//fixme after page reload list collapsed but it should be open, after click on 'run tests' button it open
-
 const TestList = ({ data }) => {
   const [activePanels, setActivePanels] = useState([])
   const screen = useBreakpoint()
@@ -84,14 +82,14 @@ const Describe = (props) => {
                 <CloseCircleTwoTone twoToneColor="#E94149" />
               )
             }
-            //fixme some wrong display in boolean tests
             return (
               <div key={name} style={{ padding: '0 24px' }}>
                 <Icon /> <Text>{name}</Text>
                 {expects.error && (
                   <Text type="secondary" style={{ paddingLeft: '24px' }}>
-                    expects({String(expects.error.expects)}).
-                    {expects.error.funcName}({String(expects.error.received)})
+                    expects({JSON.stringify(expects.error.received)}).
+                    {expects.error.funcName}(
+                    {JSON.stringify(expects.error.expects)})
                   </Text>
                 )}
               </div>
