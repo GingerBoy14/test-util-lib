@@ -20,7 +20,7 @@ function App() {
 
   const fetchData = () => {
     fetch(
-      `${window.location.protocol}//${window.location.hostname}:${process.env.REACT_APP_FETCH_PORT}/getTestsTree`
+      `${window.location.protocol}//${window.location.hostname}:${process.env.REACT_APP_FETCH_PORT}/getTests/tree`
     )
       .then((json) => json.json())
       .then((data) => setLog(data))
